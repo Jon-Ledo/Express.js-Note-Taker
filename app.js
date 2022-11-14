@@ -72,6 +72,39 @@ app.post('/api/notes', (req, res) => {
   }
 })
 
+// DELETE target note
+app.delete('/api/notes/:id', (req, res) => {
+  const { id } = req.params
+
+  readFile('./db/db.json', 'utf8', (err, data) => {
+    if (err) {
+      console.error(err)
+    } else {
+      // convert data into JSON
+      const parsedData = JSON.parse(data)
+
+      // use note ID to find index in db.json
+      const index = noteData.findIndex((note) => {
+        return note.id === id
+      })
+
+      // splice method to delete note
+      const removed = parsedData.splice(index, 1)
+
+      // write db.json with new changes
+      writeFile('./db/db.json', JSON.stringify(parsedData, null, 4), (err) => {
+        if (err) {
+          console.error(err)
+        } else {
+          console.info('Deleted Note')
+        }
+      })
+    }
+  })
+
+  res.status(200).json(noteData)
+})
+
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/index.html'))
 })
