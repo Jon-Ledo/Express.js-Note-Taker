@@ -4,6 +4,7 @@ const path = require('path')
 const port = 5000
 const { readFile, writeFile } = require('fs')
 const noteData = require('./db/db.json')
+const { v4: uuidv4 } = require('uuid')
 
 // middlewares
 app.use(express.static('public'))
@@ -23,16 +24,12 @@ app.get('/api/notes', (req, res) => {
 
 // POST request to add a note
 app.post('/api/notes', (req, res) => {
-  // const data = [{ name: 'Jon', Age: 32 }]
-  // writeFile('./db/db.json', data, () => {
-  //   console.log('testing 123')
-  // })
   console.info(`${req.method} request received to add a note`)
 
   const { title, text } = req.body
 
   if (title && text) {
-    const id = new Date().getMilliseconds()
+    const id = uuidv4()
     const newNote = {
       title,
       text,

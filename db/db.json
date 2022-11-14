@@ -1,3 +1,17 @@
 [
-
+    {
+        "title": "First Note",
+        "text": "Details Below",
+        "id": "e3fc1ce5-6f22-4ddb-b2ba-5176ee4b4084"
+    },
+    {
+        "title": "Second Note",
+        "text": "Nothing to see Here",
+        "id": "c73e2cdd-099c-4555-98ec-3c3f34c999d5"
+    },
+    {
+        "title": "Third Note",
+        "text": "It's all a dream",
+        "id": "e577f716-5e30-4723-b827-114cc04a8f80"
+    }
 ]
