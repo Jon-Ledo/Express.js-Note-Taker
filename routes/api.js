@@ -24,7 +24,7 @@ router.post('/', (req, res) => {
       id,
     }
 
-    readFile('./db/db.json', 'utf8', (err, data) => {
+    readFile('../db/db.json', 'utf8', (err, data) => {
       if (err) {
         console.error(err)
       } else {
@@ -35,7 +35,7 @@ router.post('/', (req, res) => {
         parsedData.push(newNote)
 
         writeFile(
-          './db/db.json',
+          '../db/db.json',
           JSON.stringify(parsedData, null, 4),
           (err) => {
             if (err) {
@@ -64,7 +64,7 @@ router.post('/', (req, res) => {
 router.delete('/:id', (req, res) => {
   const { id } = req.params
 
-  readFile('./db/db.json', 'utf8', (err, data) => {
+  readFile('../db/db.json', 'utf8', (err, data) => {
     if (err) {
       console.error(err)
     } else {
@@ -80,7 +80,7 @@ router.delete('/:id', (req, res) => {
       const removed = parsedData.splice(index, 1)
 
       // write db.json with new changes
-      writeFile('./db/db.json', JSON.stringify(parsedData, null, 4), (err) => {
+      writeFile('../db/db.json', JSON.stringify(parsedData, null, 4), (err) => {
         if (err) {
           console.error(err)
         } else {
