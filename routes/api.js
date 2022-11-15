@@ -66,6 +66,7 @@ router.post('/notes', (req, res) => {
 
 // DELETE target note
 router.delete('/notes/:id', (req, res) => {
+  console.info(`${req.method} request received to delete a note`)
   const { id } = req.params
 
   readFile('./db/db.json', 'utf8', (err, data) => {
@@ -91,10 +92,16 @@ router.delete('/notes/:id', (req, res) => {
           console.info('Deleted Note')
         }
       })
+
+      const response = {
+        status: 'deleted',
+        body: removed,
+      }
+
+      console.log(response)
+      res.status(200).json(response)
     }
   })
-
-  res.status(200).json(noteData)
 })
 
 module.exports = router
