@@ -4,14 +4,14 @@ const noteData = require('../db/db.json')
 const { v4: uuidv4 } = require('uuid')
 
 // GET request for notes
-router.get('/', (req, res) => {
+router.get('/notes', (req, res) => {
   res.status(200).json(noteData)
 
   console.info(`${req.method} request received to get notes`)
 })
 
 // POST request to add a note
-router.post('/', (req, res) => {
+router.post('/notes', (req, res) => {
   console.info(`${req.method} request received to add a note`)
 
   const { title, text } = req.body
@@ -61,7 +61,7 @@ router.post('/', (req, res) => {
 })
 
 // DELETE target note
-router.delete('/:id', (req, res) => {
+router.delete('/notes/:id', (req, res) => {
   const { id } = req.params
 
   readFile('./db/db.json', 'utf8', (err, data) => {
