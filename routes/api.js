@@ -81,7 +81,7 @@ router.delete('/notes/:id', (req, res) => {
       const parsedData = JSON.parse(data)
 
       // use note ID to find index in db.json
-      const index = noteData.findIndex((note) => {
+      const index = parsedData.findIndex((note) => {
         return note.id === id
       })
 

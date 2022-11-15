@@ -1,15 +1,5 @@
 [
     {
-        "title": "First Note",
-        "text": "Details Below",
-        "id": "e3fc1ce5-6f22-4ddb-b2ba-5176ee4b4084"
-    },
-    {
-        "title": "Second Note",
-        "text": "Nothing to see Here",
-        "id": "c73e2cdd-099c-4555-98ec-3c3f34c999d5"
-    },
-    {
         "title": "Third Note",
         "text": "It's all a dream",
         "id": "f7738e5c-a327-47fb-a558-dd77f74daaea"
@@ -18,16 +8,6 @@
         "title": "Fourth",
         "text": "delete me",
         "id": "54db4db4-c0a2-4541-89fd-add890867811"
-    },
-    {
-        "title": "5",
-        "text": "delete me",
-        "id": "52352cd3-9667-40e5-a1ed-2033ff5fcdfa"
-    },
-    {
-        "title": "5",
-        "text": "delete me",
-        "id": "41d48d72-0657-43db-96bb-87ecf2d8a9e3"
     },
     {
         "title": "777",
