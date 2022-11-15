@@ -1,6 +1,5 @@
 const router = require('express').Router()
 const { readFile, writeFile } = require('fs')
-const noteData = require('../db/db.json')
 const { v4: uuidv4 } = require('uuid')
 
 // GET request for notes
@@ -10,7 +9,6 @@ router.get('/notes', (req, res) => {
     if (err) {
       console.error(err)
     } else {
-      console.log('get route api/notes ')
       res.status(200).json(JSON.parse(data))
     }
   })
@@ -19,8 +17,6 @@ router.get('/notes', (req, res) => {
 // POST request to add a note
 router.post('/notes', (req, res) => {
   console.info(`${req.method} request received to add a note`)
-
-  console.log('calling post api method')
 
   const { title, text } = req.body
 
@@ -61,7 +57,6 @@ router.post('/notes', (req, res) => {
       body: newNote,
     }
 
-    console.log(response)
     res.status(201).json(response)
   } else {
     res.status(500).json('Error in posting note')
@@ -102,7 +97,6 @@ router.delete('/notes/:id', (req, res) => {
         body: removed,
       }
 
-      console.log(response)
       res.status(200).json(response)
     }
   })
