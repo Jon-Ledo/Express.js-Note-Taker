@@ -14,6 +14,8 @@ router.get('/notes', (req, res) => {
 router.post('/notes', (req, res) => {
   console.info(`${req.method} request received to add a note`)
 
+  console.log('calling post api method')
+
   const { title, text } = req.body
 
   if (title && text) {
