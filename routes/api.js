@@ -7,6 +7,8 @@ const { v4: uuidv4 } = require('uuid')
 router.get('/notes', (req, res) => {
   res.status(200).json(noteData)
 
+  console.log('get route api/notes ')
+
   console.info(`${req.method} request received to get notes`)
 })
 
