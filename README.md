@@ -2,6 +2,8 @@
 
 ![license badge](./public/assets/images/license-badge.svg)
 
+- [live site](https://sheltered-reaches-49948.herokuapp.com/)
+
 ## Description
 
 A note taking app combining [nodeJS](https://nodejs.org/en/docs/), [ExpressJS](http://expressjs.com/) and [npm UUID](https://www.npmjs.com/package/uuid). Deployed on [Heroku](https://dashboard.heroku.com/apps)
