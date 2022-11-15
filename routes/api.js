@@ -5,11 +5,15 @@ const { v4: uuidv4 } = require('uuid')
 
 // GET request for notes
 router.get('/notes', (req, res) => {
-  res.status(200).json(noteData)
-
-  console.log('get route api/notes ')
-
   console.info(`${req.method} request received to get notes`)
+  readFile('./db/db.json', 'utf8', (err, data) => {
+    if (err) {
+      console.error(err)
+    } else {
+      console.log('get route api/notes ')
+      res.status(200).json(JSON.parse(data))
+    }
+  })
 })
 
 // POST request to add a note
