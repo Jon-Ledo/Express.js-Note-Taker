@@ -1,22 +1,7 @@
 [
     {
-        "title": "Third Note",
-        "text": "It's all a dream",
+        "title": "Your first note",
+        "text": "Free to delete me",
         "id": "f7738e5c-a327-47fb-a558-dd77f74daaea"
-    },
-    {
-        "title": "Fourth",
-        "text": "delete me",
-        "id": "54db4db4-c0a2-4541-89fd-add890867811"
-    },
-    {
-        "title": "777",
-        "text": "delete me",
-        "id": "4bd69a5b-a734-4162-8d82-947525282fd7"
-    },
-    {
-        "title": "8",
-        "text": "delete me",
-        "id": "46daa888-2ff5-4d99-b17a-c0a6a511a357"
     }
 ]
